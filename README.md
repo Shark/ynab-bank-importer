@@ -14,7 +14,7 @@ This is a ruby script that **pulls your transactions from your banks** and impor
 
 YNAB only supports U.S. and Canadian Banks for now.
 
-## Usage
+## Usage (Docker)
 
 You will need to obtain a personal access token. [Here is a tutorial on how to do it](https://api.youneedabudget.com/#personal-access-tokens).
 
@@ -44,6 +44,31 @@ _Example: [`config.sample.yml`](https://github.com/schurig/ynab-bank-importer/bl
 
 3. `docker-compose pull importer && docker-compose run importer`
 
+## Usage (Dokku)
+
+1. Set up a Dokku host as [described in the docs](http://dokku.viewdocs.io/dokku/getting-started/advanced-installation/).
+
+1. Create an app:
+
+   `dokku apps:create ynab-bank-importer`
+
+1. Set a custom Docker option for headless Chromium (Barclaycard dumper) to work:
+
+   `dokku docker-options:add ynab-bank-importer deploy "--shm-size=256m"`
+
+1. Encode the configuration and store it in an environment variable:
+
+   ```
+   CONFIG=$(base64 < config.yml)
+   dokku config:set ynab-bank-importer YNAB_BANK_IMPORTER_CONFIG="$CONFIG"
+   ```
+
+1. Deploy the app:
+
+   ```
+   git remote add deploy dokku@DOKKU-HOST:ynab-bank-importer
+   git push deploy master
+   ```
 
 ## Dumpers
 
