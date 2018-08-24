@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/Shark/barclayscraper.git
+  revision: 6fddf55005eaa2efda2f6e4731d0637d2761be59
+  specs:
+    barclayscraper (0.1.0)
+      capybara (~> 3.6.0)
+      chromedriver-helper (~> 1.2.0)
+      selenium-webdriver (~> 3.14.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -8,6 +17,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    archive-zip (0.11.0)
+      io-like (~> 0.3.0)
     ast (2.4.0)
     bankscrap (2.0.6)
       activesupport
@@ -18,6 +29,18 @@ GEM
     bankscrap-bbva (2.0.2)
       bankscrap (~> 2.0.3)
     base32 (0.3.2)
+    capybara (3.6.0)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      xpath (~> 3.1)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.2.0)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     cmxl (0.2.1)
       rchardet19
     concurrent-ruby (1.0.5)
@@ -37,6 +60,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.0)
     json (2.1.0)
     mechanize (2.7.5)
       domain_name (~> 0.5, >= 0.5.1)
@@ -50,6 +74,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     money (6.10.1)
@@ -65,6 +90,9 @@ GEM
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
+    rack (2.0.5)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rchardet19 (1.3.7)
     rspec (3.7.0)
@@ -93,7 +121,11 @@ GEM
     ruby_fints (0.0.3)
       cmxl (~> 0.2)
       httparty (~> 0.10)
+    rubyzip (1.2.1)
     safe_yaml (1.0.4)
+    selenium-webdriver (3.14.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2)
     thor (0.20.0)
     thread_safe (0.3.6)
     twentysix (0.1.1)
@@ -113,6 +145,8 @@ GEM
       crack (>= 0.3.2)
       hashdiff
     webrobots (0.1.2)
+    xpath (3.1.0)
+      nokogiri (~> 1.8)
     ynab (1.2.0)
       json (~> 2.1, >= 2.1.0)
       typhoeus (~> 1.0, >= 1.0.1)
@@ -123,6 +157,7 @@ PLATFORMS
 DEPENDENCIES
   bankscrap
   bankscrap-bbva (~> 2.0.2)
+  barclayscraper!
   base32
   httparty
   rspec
@@ -135,4 +170,4 @@ DEPENDENCIES
   ynab (~> 1.2.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.4
