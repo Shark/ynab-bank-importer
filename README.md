@@ -4,6 +4,13 @@ This is a ruby script that **pulls your transactions from your banks** and impor
 
 **Mission:** A script that can run every 15 minutes on a small and cheap mini-computer at your home (eg. raspberry pi) with an easy configuration and support for most European banks.
 
+## Modifications to [schurig/ynab-bank-importer](https://github.com/schurig/ynab-bank-importer)
+
+- Added [`sentry-raven`](https://github.com/getsentry/raven-ruby) for error reporting
+- Added deployment configuration files for [Dokku](http://dokku.viewdocs.io/dokku/)
+- The settings can be be passed in as an environment variable
+- Added [clockwork](https://github.com/Rykian/clockwork) for pulling and importing transactions periodically
+
 ## Supported banks
 
 * Most German and Austrian banks _(all banks that implement the FinTS standard)_
