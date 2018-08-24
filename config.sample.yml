@@ -19,3 +19,10 @@ accounts:
     username: # n26 username
     password: # n26 password
     set_category: false # default: false, sets the N26 category name as category
+
+  - dumper: :barclaycard
+    iban: # Barclaycard iban
+    ynab_id: # last hash in the url when you click on the account in YNAB
+    username: # Barclaycard username
+    password: # Barclaycard password
+    product_id: # "Produkt ID" as shown in the table after login

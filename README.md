@@ -9,6 +9,7 @@ This is a ruby script that **pulls your transactions from your banks** and impor
 * Most German and Austrian banks _(all banks that implement the FinTS standard)_
 * BBVA Spain _(private accounts only)_
 * N26
+* Barclaycard
 
 ## Why
 
@@ -109,6 +110,10 @@ The FinTS / HBCI standard is mainly implemented by German banks.
 ### BBVA `:bbva`
 
 The field `payee` will be `N/A` because we currently don't get the payee name.
+
+### Barclaycard `:barclaycard`
+
+The ield `payee` will be `N/A` because we currently don't get the payee name.
 
 # Technical details on how it works
 
