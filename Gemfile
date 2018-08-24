@@ -17,6 +17,7 @@ gem 'ruby_fints', '0.0.3'
 gem 'barclayscraper', git: 'https://github.com/Shark/barclayscraper.git'
 
 gem 'clockwork'
+gem 'sentry-raven'
 
 gem 'base32'
 

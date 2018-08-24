@@ -3,11 +3,16 @@ require 'rubygems'
 require 'bundler/setup'
 require 'yaml'
 require 'ynab'
+require 'raven'
 
 Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |f| require f }
 Dir[File.join('.', 'lib/**/*.rb')].each { |f| require f }
 
 module Clockwork
+  error_handler do |error|
+    Raven.capture_exception(error)
+  end
+
   every(8 * 60 * 60, 'import_transactions') do # 8 hours
     # Gathering transactions
     transactions =
