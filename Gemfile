@@ -16,6 +16,8 @@ gem 'ruby_fints', '0.0.3'
 # Dumper: Barclaycard
 gem 'barclayscraper', git: 'https://github.com/Shark/barclayscraper.git'
 
+gem 'clockwork'
+
 gem 'base32'
 
 group :development do
