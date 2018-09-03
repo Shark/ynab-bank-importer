@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Shark/barclayscraper.git
-  revision: 6fddf55005eaa2efda2f6e4731d0637d2761be59
+  revision: f50b467e13d24d96c90153f3deffe062d9866b98
   specs:
     barclayscraper (0.1.0)
       capybara (~> 3.6.0)
@@ -87,14 +87,14 @@ GEM
     multipart-post (2.0.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
-    nokogiri (1.8.2)
+    nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
     parallel (1.12.1)
     parser (2.5.0.2)
       ast (~> 2.4.0)
     powerpack (0.1.1)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     rack (2.0.5)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -126,7 +126,7 @@ GEM
     ruby_fints (0.0.3)
       cmxl (~> 0.2)
       httparty (~> 0.10)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     safe_yaml (1.0.4)
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
@@ -177,6 +177,9 @@ DEPENDENCIES
   vcr
   webmock
   ynab (~> 1.2.0)
+
+RUBY VERSION
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.4
