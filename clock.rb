@@ -15,6 +15,7 @@ if ENV['DOKKU_APP_TYPE']
     browser_options.args << '--headless'
     browser_options.args << '--disable-gpu'
     browser_options.args << '--no-sandbox'
+    browser_options.args << '--disable-dev-shm-usage'
     browser_options.binary = '/app/.apt/usr/lib/chromium-browser/chromium-browser'
     Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options)
   end
