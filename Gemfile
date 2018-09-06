@@ -19,6 +19,7 @@ gem 'barclayscraper', git: 'https://github.com/Shark/barclayscraper.git'
 
 gem 'clockwork'
 gem 'sentry-raven'
+gem 'rake'
 
 gem 'base32'
 
